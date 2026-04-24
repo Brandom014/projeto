@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FUNDO */
+body {
+  height: 100vh;
+  background: linear-gradient(
+    100deg,
+    #850808 0%,
+    #681111 20%,
+    #551111 40%,
+    #030c1b 75%,
+    #020617 100%
+  );
+  overflow: hidden;
+}
+
+/* LAYOUT PRINCIPAL */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LADO ESQUERDO */
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  color: white;
+  max-width: 420px;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 25px;
+}
+
+.overlay h2 {
+  opacity: 0.85;
+}
+
+.overlay h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.overlay h1 span {
+  color: #ff4d4d;
+}
+
+.overlay p {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.overlay ul {
+  list-style: none;
+}
+
+.overlay li {
+  margin: 10px 0;
+}
+
+/* LADO DIREITO */
+.right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD LOGIN */
+.login-box {
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 18px;
+  width: 420px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TITULOS */
+.login-box h2 {
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* LABEL */
+.login-box label {
+  font-size: 13px;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* INPUTS */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #f1f5f9;
+  font-size: 14px;
+  outline: none;
+}
+
+/* CHECKBOX + LINKS */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* BOTÃO */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff2d2d, #ff4d4d);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* BOTÃO SECUNDÁRIO */
+.codigo {
+  background: #e5e7eb;
+  color: #333;
+}
+
+/* DIVISOR */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #999;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}

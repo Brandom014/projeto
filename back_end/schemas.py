@@ -1,8 +1,13 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from typing import List
 
 class LoginSchema(BaseModel):
     email: str
+    senha: str
+
+class CadastroSchema(BaseModel):
+    nome: str
+    email: EmailStr
     senha: str
 
 class ItemVenda(BaseModel):
