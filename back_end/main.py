@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from schemas import LoginSchema, VendaSchema, EntradaEstoque
+from schemas import (
+    LoginSchema, VendaSchema, EntradaEstoque, CadastroSchema
+)
+
 from services import (
     fazer_login,
+    criar_usuario,
     listar_produtos,
     listar_vendas,
     criar_venda,
@@ -27,12 +31,15 @@ app.add_middleware(
 def login(dados: LoginSchema):
     return fazer_login(dados.email, dados.senha)
 
+# REGISTER
+@app.post("/register")
+def register(dados: CadastroSchema):
+    return criar_usuario(dados.nome, dados.email, dados.senha)
 
 # PRODUTOS
 @app.get("/produtos")
 def produtos():
     return listar_produtos()
-
 
 # VENDA
 @app.post("/venda")
@@ -40,25 +47,21 @@ def venda(dados: VendaSchema):
     venda_id = criar_venda(dados)
     return {"status": "ok", "venda_id": venda_id}
 
-
 # ENTRADA
 @app.post("/entrada")
 def entrada(dados: EntradaEstoque):
     registrar_entrada(dados)
     return {"status": "estoque atualizado"}
 
-
 # VENDAS
 @app.get("/vendas")
 def vendas():
     return listar_vendas()
 
-
 # ENTRADAS
 @app.get("/entradas")
 def entradas():
     return listar_entradas()
-
 
 # DASHBOARD
 @app.get("/dashboard")

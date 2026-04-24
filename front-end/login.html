@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ESQUERDA -->
+  <div class="left">
+    <div class="overlay">
+      <img src="assets/senai.svg" class="logo">
+
+      <h2>Bem-vindo(a) ao</h2>
+      <h1>Sistema de</h1>
+      <h1><span>Ponto de Venda</span></h1>
+      <p>Faça login para continuar</p>
+
+      <ul>
+        <li>Vendas mais rápidas</li>
+        <li>Gestão inteligente</li>
+        <li>Relatórios em tempo real</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DIREITA -->
+  <div class="right">
+    <div class="login-box">
+
+      <h2>Entrar</h2>
+      <p>Acesse sua conta para continuar</p>
+
+      <form id="loginForm">
+
+        <label>Email</label>
+        <input type="email" id="usuario" required placeholder="Digite seu email">
+
+        <label>Senha</label>
+        <input type="password" id="senha" required placeholder="Digite sua senha">
+
+        <div class="options">
+          <label><input type="checkbox"> Lembrar-me</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="divider">ou</div>
+
+        <button type="button" class="codigo">Entrar com código</button>
+      </form>
+
+      <p class="register">
+        Não tem conta? <a href="cadastro.html">Criar conta</a>
+      </p>
+
+      <p class="footer">© 2024 SENAI - Todos os direitos reservados.</p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
